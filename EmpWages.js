@@ -6,7 +6,11 @@ const Is_FullTimeHrs=8;
 const PerHrWage=20;
 let ch= (Math.floor(Math.random()*10)%3);
 let empHrs=0;
-switch (ch)
+
+
+function getWorkingHours(fut)
+{
+switch (fut)
 {
     case Is_FullTime:
         empHrs=Is_FullTimeHrs;
@@ -21,5 +25,9 @@ switch (ch)
          console.log("Emp is absent");
          break;
 }
-let emp_Wage = empHrs * PerHrWage;
-console.log("Emp Wage is :" +emp_Wage);
+}
+ let fut= (Math.floor(Math.random()*10)%3);
+let empHr=0;
+empHr= getWorkingHours(fut);
+ let empWage = empHrs * PerHrWage;
+ console.log("Emp Wage is :" +empWage);
